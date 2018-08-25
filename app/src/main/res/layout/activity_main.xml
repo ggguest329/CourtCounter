@@ -15,6 +15,7 @@
         android:text="Team A"/>
 
     <TextView
+        android:id="@+id/team_a_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -25,18 +26,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:onClick="add_3_points"
         android:text="+3 points"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:onClick="add_2_points"
         android:text="+2 points"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:onClick="add_1_point"
         android:text="Free Throw"/>
 
 </LinearLayout>
