@@ -8,28 +8,32 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    int scoreTeamA = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
-    public void displayForTeamA(int score) {
-        TextView teamATextView = findViewById(R.id.team_a_score);
-        teamATextView.setText(String.valueOf(score));
-//        teamATextView.setText("" + score);   // equivalent way to setText() an integer
+    public void addThreeForTeamA(View view){
+        scoreTeamA += 3;
+        displayForTeamA(scoreTeamA);
     }
 
-    public void add_3_points(View view){
-        displayForTeamA(3);
+    public void addTwoForTeamA(View view){
+        scoreTeamA += 2;
+        displayForTeamA(scoreTeamA);
     }
 
-    public void add_2_points(View view){
-        displayForTeamA(2);
+    public void addOneForTeamA(View view){
+        scoreTeamA += 1;
+        displayForTeamA(scoreTeamA);
     }
 
-    public void add_1_point(View view){
-        displayForTeamA(1);
+    public void displayForTeamA(int scoreTeamA) {
+        TextView scoreTextView = findViewById(R.id.team_a_score);
+        scoreTextView.setText(String.valueOf(scoreTeamA));
     }
 
 }
