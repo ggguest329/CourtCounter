@@ -69,4 +69,14 @@ public class MainActivity extends AppCompatActivity {
         scoreTeamBTextView.setText(String.valueOf(scoreTeamB));
     }
 
+    /**
+     * Resets the score for both teams back to 0.
+     */
+    public void resetScore(View view) {
+        scoreTeamA = 0;
+        scoreTeamB = 0;
+        displayForTeamA(scoreTeamA);
+        displayForTeamB(scoreTeamB);
+    }
+
 }
